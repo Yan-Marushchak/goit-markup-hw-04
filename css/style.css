@@ -60,6 +60,9 @@ p {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -120,6 +123,23 @@ p {
     color: var(--color-ocean);
 }
 
+.current {}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--color-ocean);
+    border-radius: 2px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+}
+
+.current:hover,
+.current:focus {}
+
 /* /Menu */
 
 /* Contacts */
@@ -159,12 +179,16 @@ p {
 .hero {
     background: var(--color-navy-blue);
     padding: 188px 0;
-    width: 1440px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70),
-            rgba(46, 47, 66, 0.70)),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
         url(../images/background/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .hero-container {
@@ -207,6 +231,8 @@ p {
     height: 56px;
     border: none;
     margin: auto;
+
+
 }
 
 
