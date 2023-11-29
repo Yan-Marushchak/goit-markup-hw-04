@@ -18,6 +18,11 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--color-slate);
     background-color: var(--color-white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
 }
 
 .container {
@@ -40,8 +45,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
     margin: 0;
+    list-style: none;
 }
 
 .list {
@@ -60,7 +67,7 @@ p {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08),
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -157,6 +164,7 @@ p {
     color: var(--color-slate);
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -189,7 +197,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 .hero-container {
@@ -283,6 +290,7 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 8px;
 }
 
 .offers-icon {
@@ -393,8 +401,9 @@ p {
 .social-networks {
     display: flex;
     gap: 24px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 32px 0;
 }
 
 
@@ -461,10 +470,13 @@ p {
     border-radius: 4px;
     color: var(--color-light-slate);
     padding: 16px 32px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-logo-link:hover,
 .customers-logo-link:focus {
+    border-color: var(--color-ocean);
     color: var(--color-ocean);
 }
 
@@ -473,8 +485,6 @@ p {
 }
 
 /* /Customers */
-
-
 /* /Main */
 
 /* Footer */
@@ -514,8 +524,15 @@ p {
     width: 264px;
 }
 
+/* footer-social-networks */
 
 .footer-social-networks {
+    display: flex;
+    align-items: baseline;
+    margin-right: 120px;
+}
+
+.footer-social-networks-text {
     color: var(--color-white);
     font-size: 16px;
     font-weight: 500;
@@ -535,8 +552,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     padding: 8px 8px;
     background-color: var(--color-iris);
     border-radius: 50%;
@@ -563,13 +580,18 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
+    opacity: 100%;
+    visibility: visible;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition-delay: 250ms;
 }
 
 .modal-window {
@@ -580,7 +602,7 @@ p {
     width: 408px;
     min-height: 584px;
     background: var(--color-dairy);
-    box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -607,6 +629,7 @@ p {
 .modal-buttom:focus {
     background-color: var(--color-ocean);
     border: none;
+    fill: #ffffff
 }
 
 .modal-window-icon {
