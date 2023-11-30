@@ -536,7 +536,7 @@ ul {
 /* footer-social-networks */
 
 
-.footer-social-networks {
+.footer-social-networks-container {
     display: flex;
     align-items: baseline;
     margin-right: 120px;
@@ -581,7 +581,8 @@ ul {
 }
 
 .footer-social-networks-icon {
-    fill: var(--color-cloud)
+    fill: var(--color-cloud);
+
 }
 
 /* /Footer */
